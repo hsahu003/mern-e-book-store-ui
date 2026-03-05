@@ -1,7 +1,9 @@
 "use client";
 
 import React, { useState } from 'react'
+import Image from 'next/image'
 import styles from './Navbar.module.css'
+import logo from '@/app/assets/rect2-403d37ed-48bc-4a73-9172-1c8bb44ac743.png'
 import { IoSearchOutline } from 'react-icons/io5'
 import { LuSettings2 } from 'react-icons/lu'
 import { BsFillGrid3X3GapFill } from 'react-icons/bs'
@@ -80,7 +82,14 @@ const Navbar: React.FC<NavbarProps> = ({
   return (
     <nav className={styles.navbar}>
         <div className={styles.left}>
-            <span className={styles.logo}>kindle</span>
+            <span className={styles.logo}>
+              <Image
+                src={logo}
+                alt="eBooks logo"
+                width={80}
+                height={24}
+              />
+            </span>
             <div className={styles.searchBox}>
                 <IoSearchOutline className={styles.searchIcon} />
                 <input

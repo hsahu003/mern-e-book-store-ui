@@ -4,6 +4,7 @@ import React, { useState } from "react";
 import { useRouter } from 'next/navigation';
 import Image from "next/image"
 import Styles from "./Signup.module.css"
+import logo from '@/app/assets/logo.svg'
 
 
 const apiUrl = process.env.NEXT_PUBLIC_API_URL
@@ -59,7 +60,7 @@ const SignUp = () => {
   return (
     <div className={Styles.createAccountContainer}>
         <Image 
-        src="https://m.media-amazon.com/images/G/01/kfw/landing/img_logo._CB611756372_.png"
+        src={logo}
         alt='Logo'
         width={150} 
         height={50} 

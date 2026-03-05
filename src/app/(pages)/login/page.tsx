@@ -4,6 +4,7 @@ import React, { useState } from 'react'
 import { useRouter } from 'next/navigation';
 import Image from 'next/image'
 import Styles from './Login.module.css'
+import logo from '@/app/assets/logo.svg'
 
 const SingIn = () => {
     const router = useRouter();
@@ -54,7 +55,7 @@ const SingIn = () => {
   return (
     <div className={Styles.signInContainer}>
       <Image 
-        src="https://m.media-amazon.com/images/G/01/kfw/landing/img_logo._CB611756372_.png"
+        src={logo}
         alt='Logo'
         width={150} 
         height={50} 

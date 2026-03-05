@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="68.252998mm"
+   height="12.601mm"
+   viewBox="0 0 68.252998 12.601"
+   version="1.1"
+   id="svg1"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <defs
+     id="defs1" />
+  <g
+     id="layer1">
+    <g
+       id="g1"
+       transform="translate(58.472675,-16.403989)">
+      <rect
+         style="opacity:0;fill:#021232;fill-opacity:1;stroke-width:0.173266"
+         id="rect2"
+         width="68.253479"
+         height="12.600644"
+         x="-58.472916"
+         y="16.404167"
+         ry="2.5583169" />
+      <text
+         xml:space="preserve"
+         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:10.9738px;line-height:normal;font-family:'Amazon Ember';-inkscape-font-specification:'Amazon Ember Bold';text-align:center;text-decoration-color:#000000;writing-mode:lr-tb;direction:ltr;text-anchor:middle;fill:#ffffff;stroke-width:1.31752"
+         x="-42.604637"
+         y="26.243671"
+         id="text1"><tspan
+           id="tspan1"
+           style="fill:#ffffff;stroke-width:1.31752"
+           x="-42.604637"
+           y="26.243671">eBook</tspan></text>
+      <text
+         xml:space="preserve"
+         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:10.9738px;line-height:normal;font-family:'Amazon Ember';-inkscape-font-specification:'Amazon Ember Bold';text-align:center;text-decoration-color:#000000;writing-mode:lr-tb;direction:ltr;text-anchor:middle;fill:#3f8ddb;fill-opacity:1;stroke-width:1.31752"
+         x="-8.0964355"
+         y="26.243671"
+         id="text2"><tspan
+           id="tspan2"
+           style="font-style:normal;font-variant:normal;font-weight:500;font-stretch:normal;font-family:'Amazon Ember';-inkscape-font-specification:'Amazon Ember Medium';fill:#3f8ddb;fill-opacity:1;stroke-width:1.31752"
+           x="-8.0964355"
+           y="26.243671">Library</tspan></text>
+    </g>
+  </g>
+</svg>

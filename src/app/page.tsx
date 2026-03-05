@@ -3,6 +3,7 @@ import React from 'react'
 import { useRouter } from 'next/navigation'
 import styles from './page.module.css'
 import Image from 'next/image'
+import logo from './assets/logo.svg'
 
 const Page = () => {
   const router = useRouter()
@@ -10,7 +11,7 @@ const Page = () => {
     <div className={styles.c1}>
           <div className={styles.c11}>
           <Image
-                src="https://m.media-amazon.com/images/G/01/kfw/landing/img_logo._CB611756372_.png"
+                src={logo}
                 alt='Logo'
                 className={styles.logo}
                 width={500}
@@ -30,13 +31,6 @@ const Page = () => {
                 router.push('/login')
             }}
           >
-            <Image
-                src="https://m.media-amazon.com/images/G/01/kfw/landing/icon-amazon-a2x._CB611757832_.png"
-                alt='Logo'
-                className={styles.btnicon}
-                width={20}
-                height={20}
-            />
             <span>Sign In</span>
           </button>
         </div>
