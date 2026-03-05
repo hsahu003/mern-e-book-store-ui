@@ -13,6 +13,7 @@ const SingIn = () => {
         email: '',
         password: ''
     });
+    const [isSubmitting, setIsSubmitting] = useState(false);
 
    const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     setFormData({
@@ -22,35 +23,34 @@ const SingIn = () => {
   };
     const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
       e.preventDefault();
-      const { email, password } = formData;
+      if (!apiurl) {
+        alert('App configuration error: API URL is missing. Check your .env file.');
+        return;
+      }
+      setIsSubmitting(true);
       try {
         const response = await fetch(apiurl + '/api/auth/login', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json'
-        },
-        body: JSON.stringify({ email, password })
-      });
-      if (response.ok) {
-        const data = await response.json();
-        alert('Login successful');
-        // Store token or handle login success (e.g., redirect)
-        console.log('Token:', data.token);
-      router.push('/kindle-library')
-      } 
-
-      else {
-        const data = await response.json();
-        alert(data.message);
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json'
+          },
+          body: JSON.stringify({ email: formData.email, password: formData.password })
+        });
+        if (response.ok) {
+          const data = await response.json();
+          console.log('Token:', data.token);
+          router.push('/ebook-library');
+          return;
+        }
+        const data = await response.json().catch(() => ({}));
+        alert(data.message || 'Login failed');
+      } catch (error) {
+        console.error('Error:', error);
+        alert('Error logging in. Check that the server is running and NEXT_PUBLIC_API_URL is correct.');
+      } finally {
+        setIsSubmitting(false);
       }
-
     }
-    catch (error) {
-      console.error('Error:', error);
-      alert('Error logging in');
-    }
-
-  }
 
   return (
     <div className={Styles.signInContainer}>
@@ -78,7 +78,9 @@ const SingIn = () => {
         
         <input type="password" id="password" value={formData.password} onChange={handleChange} required/>
 
-        <button type="submit" className={Styles.signInButton}>Sign In</button>  
+        <button type="submit" className={Styles.signInButton} disabled={isSubmitting}>
+          {isSubmitting ? 'Signing in...' : 'Sign In'}
+        </button>  
       </form>
       <p className={Styles.dontHaveAccount}>
         Don&apos;t have an account? 
