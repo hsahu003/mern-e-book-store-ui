@@ -33,7 +33,7 @@ const apiurl = process.env.NEXT_PUBLIC_API_URL
             throw new Error("Failed to fetch book data");
           }
           const data: Book = await response.json();
-          const url = 'http://localhost:5000/' + data.pdf;
+          const url = String(apiurl + "/" + data.pdf);
           setPdfUrl(url);
         } catch (err) {
           console.error(err);
